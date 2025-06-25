@@ -1,11 +1,456 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JAY TRAVEL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body{
+        font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background-color: #1d1e1e;
+            padding: 10px 20px;
+        }
+
+        .navbar-brand {
+            color: #ff7105;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .img-fluid{
+            width: 100%;
+            height: 400px;
+          
+        }
+        .container {
+           
+            font-family: font-family: "Montserrat", sans-serif;
+        }
+        .row{
+            justify-content: center;
+            
+        }
+        .DESTINATIONS {
+            font-family: 'Roboto', sans-serif;
+            color: rgb(171, 171, 171);
+            font-size: 20px;
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
+        }
+        .text-center {
+            margin-top: 20px;
+            color: rgb(255, 166, 0);
+            font-family: font-family: "Montserrat", sans-serif;
+        }
+        .teamworkis {
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            font-family: 'Roboto', sans-serif;
+            margin: 20px auto;
+            width: 60%;
+        }
+        .justify-content-center {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+       .teamleads {
+            font-family: 'Roboto', sans-serif;
+            color: black;
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 300px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .stats-section {
+            background-color: #85888b;
+            padding: 50px 0;
+        }
+        .stat-item{
+            padding: 30px 15px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            
+
+        }
+        
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ff7105;
+            margin-bottom: 10px;
+        }
+        
+        .stat-number.plus:after {
+            content: "+";
+            font-size: 1.5rem;
+            vertical-align: top;
+            margin-left: 2px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .stat-number {
+                font-size: 2rem;
+            }
+            
+            .stat-label {
+                font-size: 1rem;
+                color: azure;
+            }
+        
+        }
+        .hotel-card{
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            margin-bottom: 30px;
+            overflow: hidden;
+
+        }
+
+        .card-header {
+            background-color: #f8f9fa;
+            padding: 15px;
+           
+        }
+        .hotel-name{
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #20a5e2;
+        }
+        .hotel-location{
+            font-size: 1rem;
+            color: #85888b;
+        }
+        .review-text {
+            font-weight: bold;
+            color: #6d0808;
+        }
+        .reviewer{
+            font-weight: bold;
+            color: #95b6be;
+        }
+
+        .reviewer-location {
+            font-style: italic;
+            color: #66dd56;
+        }
+        .user-form {
+           display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;        
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+       
+
+        .form-container {
+         background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      max-width: 500px;
+      width: 100%;
+    }
+        .form-row{
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .form-row input{
+            flex: 1;
+        }
+        .form-container input {
+            max-width: 100%;
+            font-size: 15px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            margin: 0 auto;
+            padding: 10px;
+            background-color: #f8f9fa;
+            outline: none;
+            
+            
+        }
+
+        .form-container input:focus {
+      border-color: #007bff;
+    }
+        .form-container button {
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .form-container button:hover {
+      background: #0056b3;
+    }
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand fw-bold" href="#">JAY TRAVEL</a>
+          
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">ABOUT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SERVICES</a>
+              </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TESTIMONALS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">PORTFOLIO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACTS</a>
+                </li>
+
+               
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <img src="main.jpg" class="img-fluid" alt="Responsive image" >
+
+
+    <section class="container text-center my-5" >
+        <h1>
+            TOP DESTINATIONS
+        </h1>
+    </section>
     
-</body>
+    <div>
+        <ul class="DESTINATIONS">
+            
+            <li class="col-md-2">MALDIVES</li>
+            <li class="col-md-2">SRILANKA</li>
+            <li class="col-md-2">SWITZERLAND</li>
+            <li class="col-md-2">ROME</li>
+            <li class="col-md-2">THAILAND</li>
+
+        </ul>
+    </div>
+
+   
+    <div class="row">
+
+     <img src="Maldives.jpg" class="col-md-2" alt="Destination 1">
+        <img src="Sri Lanka.jpg" class="col-md-2" alt="Destination 2">
+        <img src="Switzerland.jpg" class="col-md-2" alt="Destination 3">
+        <img src="Rome.jpg" class="col-md-2" alt="Destination 4">
+    <img src="Thailand.jpg" class="col-md-2" alt="Destination 5">
+
+       
+       
+    </div>
+    <section class="container text-center my-5">
+        <h1>
+            OUR TEAM LEADS 
+        </h1>
+    </section>
+        <p class="teamworkis text-center">
+            Teamworkis the ability to work together toward a common vision.The ability to direct individual accomplishments toward organizational objectives.It is the fuel that allow common people to attain uncommon results.
+        </p>
+
+        <section>
+            <div class="container py-5 text-center">
+                <div class="row justify-content-center g-4">
+            
+                  <div class="col-md-3">
+                    <div class="card border-0">
+                      <img src="hugo silva.jpeg" class="card-img-top" alt="Hugo Silva">
+                      <div class="card-body">
+                        <h5 class="card-title">HUGO SILVA</h5>
+                      </div>
+                    </div>
+                  </div>
+            
+                  
+                  <div class="col-md-3">
+                    <div class="card border-0">
+                      <img src="mohamed.jpeg" class="card-img-top" alt="MOHAMED">
+                      <div class="card-body">
+                        <h5 class="card-title">MOHAMED</h5>
+                      </div>
+                    </div>
+                  </div>
+            
+                  
+                  <div class="col-md-3">
+                    <div class="card border-0">
+                      <img src="javier bardam.jpeg" class="card-img-top" alt="Javier Bardem">
+                      <div class="card-body">
+                        <h5 class="card-title">JAVIER BARDEM</h5>
+                      </div>
+                    </div>
+                  </div>
+            
+                </div>
+              </div>
+    </section>
+
+   <section class="stats-section ">
+    <div class="container">
+        `<div class="row">
+            
+            <div class="col-md-3  col-sm-6">
+                <div class="stat-item">
+                    <div class="stat-number plus">250k</div>
+                    <div class="stat-label">Happy clients</div>
+                </div>
+             </div>
+
+
+             <div class="col-md-3  col-sm-6">
+                <div class="stat-item">
+                    <div class="stat-number plus">800</div>
+                    <div class="stat-label">Weakly reservation</div>
+                </div>
+             </div>
+
+             <div class="col-md-3  col-sm-6">
+                <div class="stat-item">
+                    <div class="stat-number plus">150</div>
+                    <div class="stat-label">Travel Partners</div>
+                </div>
+             </div>
+
+             <div class="col-md-3  col-sm-6">
+                <div class="stat-item">
+                    <div class="stat-number plus">15</div>
+                    <div class="stat-label">Branches</div>
+                </div>
+             </div>
+
+
+
+
+        </div>
+    </div>
+   </section>
+
+   <section class="container text-center my-5" >
+    <h1>
+       OVERHEAD FROM TRAVELLERS
+    </h1>
+</section>
+
+    
+
+    <div class="container">
+        <h1 class="text-center mb-5"></h1>
+        <div class="row">
+        
+            
+            <div class="col-md-3">
+                <div class="hotel-card">
+                    <div class="card-header">
+                        <div class="hotel-name">Hotel Eucalyptus</div>
+                        <div class="hotel-location">in Greece</div>
+                    </div>
+                    <div class="card-body">
+                        <p class="review-text">"We booked Hotel Eucalyptus through Jay after reading a handful of reviews, and it was easily the best decision we made ...more"</p>
+                        <div class="reviewer">- Joyce <span class="reviewer-location">from Canada</span></div>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="col-md-3">
+                <div class="hotel-card">
+                    <div class="card-header">
+                        <div class="hotel-name">Holiday Inn Resort Batam</div>
+                        <div class="hotel-location">in Indonesia</div>
+                    </div>
+                    <div class="card-body">
+                        <p class="review-text">"Thanks Jay for letting me change room without charge and rebate the difference. Nice staffs Agoda and Holiday Inn!"</p>
+                        <div class="reviewer">- Andy <span class="reviewer-location">from Singapore</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            <div class="col-md-3">
+                <div class="hotel-card">
+                    <div class="card-header">
+                        <div class="hotel-name">Hotel Granvia Kyoto</div>
+                        <div class="hotel-location">in Japan</div>
+                    </div>
+                    <div class="card-body">
+                        <p class="review-text">"Our family was traveling via bullet train between cities in Japan with our luggage - the location for this hotel made that ...more"</p>
+                        <div class="reviewer">- Diane <span class="reviewer-location">from the United States</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="container text-center my-5">
+        <h1>
+            OUR TEAM LEADS 
+        </h1>
+    </section>
+
+
+   <div class="form-container user-form">
+    <div class="form-row">
+      <input type="text" id="firstName" placeholder="First Name">
+      <input type="text" id="lastName" placeholder="Last Name">
+    </div>
+    
+    <input type="email" id="email" placeholder="E-mail">
+        <br><br>
+    <input type="tel" id="phone" placeholder="Phone Number">
+         <br><br>
+    <button onclick="submitForm()">Submit</button>
+  </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+  </body>
 </html>
