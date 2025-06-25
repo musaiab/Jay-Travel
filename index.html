@@ -116,13 +116,14 @@
             .stat-number {
                 font-size: 2rem;
             }
-            
-            .stat-label {
+         
+        
+        }
+           
+        .stat-label {
                 font-size: 1rem;
                 color: azure;
             }
-        
-        }
         .hotel-card{
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -185,6 +186,14 @@
             gap: 15px;
             margin-bottom: 15px;
         }
+
+        .form-check-label {
+            display: inline-flex;
+            align-items: center;
+           
+            font-size: 15px;
+            color: #333;
+        }
         .form-row input{
             flex: 1;
         }
@@ -227,13 +236,14 @@
       font-size: 16px;
     }
     .footer-container {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         margin: 0 auto;
         flex: 1;
         display: flex;
         justify-content: space-between;
         padding: 20px;
-        background-color: #181a5a;
-        color: white;
+        background-color: #1c255c;
+        color: rgb(154, 136, 136);
     }
     .footer-colomn {
         flex: 1;
@@ -241,6 +251,11 @@
         margin: 10px;
        
 
+    }
+    .py-3 {
+        margin-top: 0%;
+        padding: 20px 0;
+        font-size: 10px;
     }
 
 
@@ -471,6 +486,14 @@
         <br><br>
     <input type="tel" id="phone" placeholder="Phone Number">
          <br><br>
+         <div>
+            <label class="form-check-label" for="subscribe">
+           
+            <input type="checkbox" id="subscribe" >
+            Subscribe to our newsletter
+            </label>
+        </div>
+      
     <button onclick="submitForm()">Submit</button>
   </div>
 
@@ -523,6 +546,12 @@
 
     </div>
 
+  </footer>
+
+  <footer>
+    <div class="text-center py-3" style="background-color: #010101; color: white;">
+        <p>Copyright &copy; 2020 - SLITT WEB DEVELOPMENT - All rights reserved  </p>
+     <a href="#" class="text-white
   </footer>
       
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
